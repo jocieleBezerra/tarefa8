@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Obras Artisticas</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFF;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+            grid-template-areas:
+            'container1 container2 container3';
+        }
+
+        .item1 { grid-area: container1; }
+        .item2 { grid-area: container2; }
+        .item3 { grid-area: container3; }
+
+        p{
+            width: auto;
+            height: auto;
+        }
+        @media (max-width: 680px) {
+            .grid-container {
+                grid-template-areas:
+                'container1 container2 container2'
+                'container3 container3 container3';
+            }
+        }
+
+        @media (max-width: 420px) {
+            .grid-container {
+                grid-template-areas:
+                'container1 container1 container1'
+                'container2 container2 container2'
+                'container3 container3 container3';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="container item1">
+            <img src="./imgs/ron-mueck-1.JPG" class="img"/>
+            <h2>Lorem ipsum faucibus</h2>
+            <p>
+                Lorem ipsum faucibus curae lacus fringilla dolor suspendisse, 
+                varius praesent quis faucibus massa sollicitudin et, 
+                justo vestibulum porttitor suscipit felis pellentesque.
+            </p>
+        </div>
+        <div class="container item2">
+            <img src="./imgs/ron-mueck-2.JPG" class="img"/>
+            <h3>Lorem ipsum faucibus</h2>
+            <p>
+                Lorem ipsum faucibus curae lacus fringilla dolor suspendisse, 
+                varius praesent quis faucibus massa sollicitudin et, 
+                justo vestibulum porttitor suscipit felis pellentesque.
+            </p>
+        </div>
+        <div class="container item3">
+            <img src="./imgs/ron-mueck-3.JPG" class="img"/>
+            <h2>Lorem ipsum faucibus</h2>
+            <p>
+                Lorem ipsum faucibus curae lacus fringilla dolor suspendisse, 
+                varius praesent quis faucibus massa sollicitudin et, 
+                justo vestibulum porttitor suscipit felis pellentesque.
+            </p>
+        </div> 
+    </div>    
+</body>
+</html>
